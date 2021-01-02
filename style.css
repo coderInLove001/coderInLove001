@@ -1,0 +1,114 @@
+@keyframes appear {
+  0%{
+    opacity: 0;
+  }
+  
+}
+
+@keyframes appear1 {
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes appear2 {
+  0%{
+    opacity: 0;
+  }
+  60%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+body {
+  background-color: black;
+}
+
+h1 {
+  color: white;
+  animation: appear 2s ease-in;
+  text-align: center;
+  top: 15vh;
+  position: relative;
+}
+
+#wrapper {
+ padding: 50px;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  animation: appear1 4s ease-in;
+}
+
+#heart {
+  position: absolute;
+  background-color: red;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  height: 25vh;
+  width: 25vh;
+  transform: rotate(-45deg);
+}
+
+#heart::after {
+  background-color: red;
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  width: 25vh;
+  height: 25vh;
+  top: 0;
+  left: 87.5px; 
+}
+#heart::before {
+  content: "";
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  width: 25vh;
+  height: 25vh;
+  top: -87.5px;
+  left: 0;  
+}
+
+p {
+  color: white;
+  text-align: center;
+  font-size: 5rem;
+  top: 50vh;
+  position: relative;
+  animation: appear2 6s ease-in;
+}
+
+@media screen and (max-width: 414px) {
+  #heart::before {
+        top: -193.5px;
+  }
+   #heart::after {
+        left: 193.5px;
+  }
+  
+  p {
+    top: 66vh;
+  }
+  
+  h1{
+    top: 18vh;
+    font-size: 3rem;
+  }
+}
