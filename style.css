@@ -97,18 +97,18 @@ p {
 
 @media screen and (max-width: 414px) {
   #heart::before {
-        top: -193.5px;
+        top: -93.5px;
   }
    #heart::after {
-        left: 193.5px;
+        left: -93.5px;
   }
   
   p {
-    top: 66vh;
+    top: 44vh;
   }
   
   h1{
-    top: 18vh;
+    top: 13vh;
     font-size: 3rem;
   }
 }
